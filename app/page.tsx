@@ -1,65 +1,19 @@
+import { FeaturedProjects } from "@/components/featured-projects"
+import { Hero } from "@/components/hero"
+import { SiteHeader } from "@/components/site-header"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Instagram, Twitter, Facebook, Youtube, Github, Linkedin, ExternalLink, Mail, MapPin } from "lucide-react"
+import { Github, Mail } from "lucide-react"
 
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Floating geometric elements */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-20 right-20 w-16 h-16 bg-primary/20 rounded-lg rotate-45 animate-pulse"></div>
-        <div className="absolute bottom-32 left-16 w-12 h-12 bg-accent/30 rounded-full animate-bounce"></div>
-        <div className="absolute top-1/2 right-1/4 w-8 h-8 bg-primary/40 rounded-sm rotate-12"></div>
-      </div>
+      <SiteHeader />
+      <Hero />
 
-      <div className="fixed left-6 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4">
-        <a href="https://www.instagram.com/_amanuel_a/" className="p-2 text-muted-foreground hover:text-primary transition-colors">
-          <Instagram size={20} />
-        </a>
-        <a href="https://github.com/manuel-spec" className="p-2 text-muted-foreground hover:text-primary transition-colors">
-          <Github size={20} />
-        </a>
-        <a href="https://www.linkedin.com/in/amanuel-asefa-03904a24a/" className="p-2 text-muted-foreground hover:text-primary transition-colors">
-          <Linkedin size={20} />
-        </a>
-      </div>
-
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-between px-8 lg:px-16 relative">
-        <div className="flex-1 max-w-2xl">
-          <div className="mb-6">
-            <p className="text-muted-foreground mb-2">👋 Hello</p>
-            <h1 className="text-5xl lg:text-7xl font-bold mb-4">
-              I'm <span className="text-primary">Amanuel Asefa</span>
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 flex items-center gap-2">
-              <MapPin size={20} />A Mobile & Web Full Stack Developer specializing in MERN, React Native, Flutter, and
-              Laravel.
-            </p>
-          </div>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            👉 View My Work
-          </Button>
-        </div>
-
-        <div className="hidden lg:block flex-1 flex justify-center">
-          <div className="relative">
-            <img
-              src="/amanuel-cyberpunk-portrait.jpeg"
-              alt="Amanuel Asefa - Cyberpunk Portrait"
-              className="w-96 h-96 object-cover"
-              style={{
-                borderRadius: "60px 20px 80px 30px",
-              }}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section className="py-20 px-8 lg:px-16">
+      <section id="about" className="scroll-mt-20 py-20 px-8 lg:px-16">
         <div className="max-w-6xl mx-auto">
           <Card className="bg-card border-border p-8">
             <div className="flex flex-col lg:flex-row gap-8 items-start">
@@ -88,77 +42,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Featured Works */}
-      <section className="py-20 px-8 lg:px-16">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12">Featured Projects</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                title: "📱 Sammanware",
-                description:
-                  "E-Learning App built with React Native. A mobile-first e-learning platform designed to make online education accessible.",
-                image: "/Screenshot 2025-09-09 133237.png",
-              },
-              {
-                title: "📡 Telecom Tower Resource Management",
-                description:
-                  "React Native + Supabase. Managed resources, operations, and data for telecom towers at Safaricom Ethiopia.",
-                image: "Screenshot 2025-09-09 133839.png",
-              },
-              {
-                title: "🚚 Tater Delivery",
-                description:
-                  "Flutter app for construction apparatus delivery. Enabled smooth ordering and delivery of construction tools and materials.",
-                image: "https://www.upwork.com/att/download/portfolio/persons/uid/1664902301463535616/profile/projects/files/e70e1c5c-c2da-4da9-affd-18895f6b220a",
-              },
-              {
-                title: "🔬 Tadas",
-                description:
-                  "Laboratory Management System. Full-stack web application that streamlined lab data management and operational workflows.",
-                image: "/react-development-tutorial.jpg",
-              },
-              {
-                title: "⚠️ Scam Reporting Platform",
-                description:
-                  "React Router v7 + Appwrite. A public reporting tool to flag online scams and fraudulent activities.",
-                image: "/modern-css-design-patterns.jpg",
-              },
-              {
-                title: "🌍 Web3 Crypto Trade Simulation",
-                description:
-                  "Built 3 platforms for crypto trade simulation and experimentation. Exploring decentralized solutions and blockchain-based applications.",
-                image: "/full-stack-web-development.png",
-              },
-            ].map((project, index) => (
-              <Card
-                key={index}
-                className="group hover:scale-105 transition-transform duration-300 bg-card border-border overflow-hidden"
-              >
-                <div className="aspect-video bg-muted">
-                  <img
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="font-bold text-lg mb-2">{project.title}</h3>
-                  <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent"
-                  >
-                    View Project
-                    <ExternalLink size={14} className="ml-2" />
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FeaturedProjects />
 
       {/* Skills Section */}
       <section className="py-20 px-8 lg:px-16">
@@ -284,8 +168,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Get a Quote */}
-      <section className="py-20 px-8 lg:px-16">
+      <section id="contact" className="scroll-mt-20 py-20 px-8 lg:px-16">
         <div className="max-w-4xl mx-auto">
           <Card className="bg-card border-border p-8">
             <CardHeader className="text-center">
@@ -320,8 +203,17 @@ export default function Portfolio() {
 
       {/* Footer */}
       <footer className="py-12 px-8 lg:px-16 border-t border-border">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-muted-foreground">© 2024 Amanuel Asefa. All rights reserved.</p>
+        <div className="max-w-6xl mx-auto flex flex-col items-center gap-3 text-center">
+          <p className="text-muted-foreground">© 2026 Amanuel Asefa. All rights reserved.</p>
+          <a
+            href="https://github.com/manuel-spec"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 font-mono text-sm text-primary hover:underline"
+          >
+            <Github size={16} aria-hidden />
+            github.com/manuel-spec
+          </a>
         </div>
       </footer>
     </div>
