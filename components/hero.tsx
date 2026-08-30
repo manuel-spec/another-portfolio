@@ -14,14 +14,14 @@ export function Hero() {
       <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
         <div>
           <p className="mb-6 inline-block -rotate-2 border-2 border-foreground bg-accent px-2 py-1 font-mono text-xs font-bold uppercase tracking-[0.2em] text-accent-foreground shadow-[3px_3px_0_0_var(--primary)]">
-            01 — Full-stack · mobile & web
+            01  Full-stack · mobile & web
           </p>
           <h1 className="text-5xl font-black uppercase leading-[0.9] tracking-tighter sm:text-6xl lg:text-8xl">
             Amanuel
             <span className="block text-primary">Asefa</span>
           </h1>
           <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
-            I design and ship products that have to work in the field — classrooms,
+            I design and ship products that have to work in the field  classrooms,
             tower sites, labs, and delivery routes. MERN, React Native, Flutter,
             and Laravel, with the boring parts (auth, data, ops) taken seriously.
           </p>

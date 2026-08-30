@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Github, Menu, X } from "lucide-react"
+import { ArrowUpRight, Github, Menu, X } from "lucide-react"
 
 const links = [
   { href: "#work", label: "Work" },
@@ -40,6 +40,15 @@ export function SiteHeader() {
               {link.label}
             </a>
           ))}
+          <a
+            href="/Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 font-mono text-xs font-bold uppercase tracking-[0.22em] text-primary hover:text-accent"
+          >
+            Resume
+            <ArrowUpRight className="about-resume-nudge size-3.5" aria-hidden />
+          </a>
           <a
             href="https://github.com/manuel-spec"
             target="_blank"
@@ -81,6 +90,18 @@ export function SiteHeader() {
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href="/Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 py-2 font-mono text-sm uppercase tracking-[0.18em] text-primary"
+                onClick={() => setOpen(false)}
+              >
+                Resume
+                <ArrowUpRight className="size-4" aria-hidden />
+              </a>
+            </li>
             <li>
               <a
                 href="https://github.com/manuel-spec"
