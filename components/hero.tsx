@@ -8,15 +8,15 @@ export function Hero() {
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-16 top-1/2 hidden h-[28rem] w-[28rem] -translate-y-1/2 rounded-full bg-primary/10 blur-3xl lg:block"
+        className="pointer-events-none absolute -right-16 top-1/2 hidden h-[28rem] w-[28rem] -translate-y-1/2 rounded-full bg-primary/25 blur-3xl lg:block"
       />
 
       <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
         <div>
-          <p className="mb-6 font-mono text-xs uppercase tracking-[0.28em] text-primary">
+          <p className="mb-6 inline-block -rotate-2 border-2 border-foreground bg-accent px-2 py-1 font-mono text-xs font-bold uppercase tracking-[0.2em] text-accent-foreground shadow-[3px_3px_0_0_var(--primary)]">
             01 — Full-stack · mobile & web
           </p>
-          <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl lg:text-8xl">
+          <h1 className="text-5xl font-black uppercase leading-[0.9] tracking-tighter sm:text-6xl lg:text-8xl">
             Amanuel
             <span className="block text-primary">Asefa</span>
           </h1>
@@ -28,18 +28,15 @@ export function Hero() {
           <p className="mt-4 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
             React Native · Flutter · MERN · Laravel
           </p>
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a
-              href="#work"
-              className="inline-flex items-center rounded-md bg-primary px-5 py-2.5 font-mono text-sm font-medium text-primary-foreground transition-transform motion-safe:hover:-translate-y-0.5"
-            >
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <a href="#work" className="punk-btn">
               View work
             </a>
             <a
               href="https://github.com/manuel-spec"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-2.5 font-mono text-sm text-foreground transition-colors hover:border-primary hover:text-primary"
+              className="punk-btn-ghost"
             >
               <Github className="size-4" aria-hidden />
               GitHub
@@ -47,21 +44,24 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="flex justify-center lg:justify-end">
+        <div className="flex flex-col items-center lg:items-end">
           <div className="relative">
             <div
               aria-hidden
-              className="absolute inset-4 rounded-full bg-primary/20 blur-2xl"
-            />
+              className="absolute -right-3 -top-3 z-10 rotate-[12deg] border-2 border-foreground bg-accent px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-widest text-accent-foreground"
+            >
+              Live
+            </div>
             <img
               src="/amanuel-cyberpunk-portrait.jpeg"
               alt="Illustrated portrait of Amanuel Asefa"
-              className="relative size-64 rounded-full object-cover ring-1 ring-primary/30 sm:size-80 lg:size-[22rem]"
+              className="relative size-64 object-cover border-2 border-foreground shadow-[8px_8px_0_0_var(--primary)] sm:size-80 lg:size-[22rem]"
+              style={{ borderRadius: "60px 20px 80px 30px" }}
             />
-            <p className="mt-4 text-center font-mono text-[11px] uppercase tracking-[0.25em] text-muted-foreground">
-              Available for new builds
-            </p>
           </div>
+          <p className="mt-5 -rotate-1 border-2 border-foreground bg-primary px-2 py-1 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-primary-foreground">
+            Available for new builds
+          </p>
         </div>
       </div>
     </section>

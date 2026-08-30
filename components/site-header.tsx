@@ -13,7 +13,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/80 bg-background/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b-2 border-foreground bg-background punk-hatch">
       <a
         href="#work"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:rounded-md focus:bg-primary focus:px-3 focus:py-2 focus:text-sm focus:text-primary-foreground"
@@ -22,11 +22,11 @@ export function SiteHeader() {
       </a>
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-8 lg:px-16">
         <a href="#top" className="flex items-center gap-3 no-underline">
-          <span className="flex size-8 items-center justify-center rounded-md border border-primary/40 bg-primary/10 font-mono text-xs font-semibold text-primary">
+          <span className="flex size-8 rotate-[-8deg] items-center justify-center border-2 border-foreground bg-primary font-mono text-xs font-bold text-primary-foreground shadow-[3px_3px_0_0_var(--accent)]">
             AA
           </span>
-          <span className="font-mono text-sm tracking-wide">
-            Amanuel<span className="text-muted-foreground">.dev</span>
+          <span className="font-mono text-sm font-bold uppercase tracking-[0.18em]">
+            Amanuel<span className="text-primary">.dev</span>
           </span>
         </a>
 
@@ -35,7 +35,7 @@ export function SiteHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="font-mono text-xs uppercase tracking-[0.22em] text-muted-foreground transition-colors hover:text-foreground"
+              className="font-mono text-xs font-bold uppercase tracking-[0.22em] text-muted-foreground transition-colors hover:text-primary"
             >
               {link.label}
             </a>
@@ -44,7 +44,7 @@ export function SiteHeader() {
             href="https://github.com/manuel-spec"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-md border border-border px-3 py-1.5 font-mono text-xs uppercase tracking-[0.18em] text-foreground transition-colors hover:border-primary hover:text-primary"
+            className="inline-flex items-center gap-2 border-2 border-foreground bg-accent px-3 py-1.5 font-mono text-xs font-bold uppercase tracking-[0.18em] text-accent-foreground shadow-[3px_3px_0_0_var(--foreground)] hover:translate-x-px hover:translate-y-px"
           >
             <Github className="size-3.5" aria-hidden />
             GitHub
@@ -53,7 +53,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex size-9 items-center justify-center rounded-md border border-border text-foreground md:hidden"
+          className="inline-flex size-9 items-center justify-center border-2 border-foreground bg-primary text-primary-foreground md:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
