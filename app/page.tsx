@@ -1,11 +1,9 @@
 import { FeaturedProjects } from "@/components/featured-projects"
 import { Hero } from "@/components/hero"
+import { HitMeUp } from "@/components/hit-me-up"
 import { SiteHeader } from "@/components/site-header"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Github, Mail } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card"
+import { Github } from "lucide-react"
 
 export default function Portfolio() {
   return (
@@ -168,38 +166,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section id="contact" className="scroll-mt-20 py-20 px-8 lg:px-16">
-        <div className="max-w-4xl mx-auto">
-          <Card className="bg-card border-border p-8">
-            <CardHeader className="text-center">
-              <CardTitle className="text-3xl font-bold mb-4">💬 Got a project in mind?</CardTitle>
-              <CardDescription className="text-muted-foreground">
-                Let's build something amazing together. Share your project details and I'll get back to you soon.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Name</label>
-                  <Input placeholder="Your name" className="bg-input border-border" />
-                </div>
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Email</label>
-                  <Input type="email" placeholder="your@email.com" className="bg-input border-border" />
-                </div>
-              </div>
-              <div>
-                <label className="text-sm font-medium mb-2 block">Project Details</label>
-                <Textarea placeholder="Tell me about your project..." className="bg-input border-border min-h-32" />
-              </div>
-              <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                <Mail size={16} className="mr-2" />
-                Send Message
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+      <HitMeUp />
 
       {/* Footer */}
       <footer className="py-12 px-8 lg:px-16 border-t border-border">

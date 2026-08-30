@@ -58,8 +58,7 @@ function Tilt({
 
 function Stamp() {
   return (
-    <span className="inline-flex items-center gap-2 rounded-sm border border-primary/50 bg-primary/10 px-2 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-primary">
-      <span className="size-1.5 rounded-full bg-primary motion-safe:animate-pulse" />
+    <span className="inline-flex -rotate-3 items-center gap-2 border-2 border-foreground bg-accent px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-accent-foreground shadow-[2px_2px_0_0_var(--foreground)]">
       NDA
     </span>
   )
@@ -70,7 +69,7 @@ export function FeaturedProjects() {
     <section id="work" className="relative scroll-mt-20 overflow-hidden py-24 px-8 lg:px-16">
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-8 -z-10 -translate-x-1/2 font-mono text-[18vw] font-bold leading-none text-foreground/[0.035] select-none"
+        className="pointer-events-none absolute left-1/2 top-8 -z-10 -translate-x-1/2 font-mono text-[18vw] font-black leading-none text-primary/15 select-none"
       >
         ARCHIVE
       </div>
@@ -81,7 +80,7 @@ export function FeaturedProjects() {
             <p className="mb-3 font-mono text-xs uppercase tracking-[0.28em] text-primary">
               03 — Selected work
             </p>
-            <h2 className="text-4xl font-bold tracking-tight lg:text-5xl">
+            <h2 className="text-4xl font-black uppercase tracking-tighter lg:text-5xl">
               Built under lock.
             </h2>
           </div>
@@ -125,7 +124,7 @@ export function FeaturedProjects() {
           </div>
         </div>
 
-        <article className="group relative mb-8 overflow-hidden rounded-2xl border border-border bg-card">
+        <article className="group relative mb-8 overflow-hidden border-2 border-foreground bg-card shadow-[8px_8px_0_0_var(--primary)]">
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,oklch(1_0_0_/_0.03)_1px,transparent_1px),linear-gradient(to_bottom,oklch(1_0_0_/_0.03)_1px,transparent_1px)] bg-[size:28px_28px]"
@@ -140,7 +139,7 @@ export function FeaturedProjects() {
                     Restricted
                   </span>
                 </div>
-                <h3 className="text-5xl font-bold tracking-tighter lg:text-7xl">
+                <h3 className="text-5xl font-black uppercase tracking-tighter lg:text-7xl">
                   TADAS
                 </h3>
                 <p className="max-w-lg text-base leading-relaxed text-muted-foreground">
@@ -160,7 +159,7 @@ export function FeaturedProjects() {
                   href="https://tadasystem.net/home"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2.5 font-mono text-sm font-medium text-primary-foreground transition-transform motion-safe:hover:-translate-y-0.5"
+                  className="punk-btn"
                 >
                   <span className="work-caret inline-block h-4 w-[2px] bg-primary-foreground" />
                   open tadasystem.net
@@ -274,7 +273,7 @@ export function FeaturedProjects() {
             href="https://github.com/manuel-spec"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex shrink-0 items-center gap-2 rounded-md border border-primary/40 bg-primary/10 px-4 py-2.5 font-mono text-sm text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+            className="punk-btn shrink-0"
           >
             <Github className="size-4" aria-hidden />
             github.com/manuel-spec
@@ -309,11 +308,11 @@ function DeviceCase({
 }) {
   return (
     <Tilt className="h-full">
-      <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card">
-        <div className="relative flex min-h-80 items-end justify-center overflow-hidden bg-background pt-10">
+      <article className="group relative flex h-full flex-col overflow-hidden border-2 border-foreground bg-card shadow-[6px_6px_0_0_var(--primary)]">
+        <div className="relative flex min-h-80 items-end justify-center overflow-hidden bg-background punk-hatch pt-10">
           <div
             aria-hidden
-            className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,oklch(0.65_0.18_35_/_0.16),transparent_58%)]"
+            className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,oklch(0.68_0.28_12_/_0.2),transparent_58%)]"
           />
           <div
             className={`relative z-10 mb-[-2.5rem] origin-bottom transition-transform duration-500 motion-safe:group-hover:-translate-y-3 motion-safe:group-hover:rotate-0 ${
@@ -323,7 +322,7 @@ function DeviceCase({
             <img
               src={src.replaceAll(" ", "%20")}
               alt={alt}
-              className="h-72 w-auto max-w-[13.5rem] rounded-[1.6rem] border-[6px] border-foreground/90 object-cover object-top shadow-2xl"
+              className="h-72 w-auto max-w-[13.5rem] rounded-[1.6rem] border-2 border-foreground object-cover object-top shadow-[6px_6px_0_0_var(--accent)]"
             />
           </div>
         </div>
@@ -361,7 +360,7 @@ function SideCase({
   icon: ReactNode
 }) {
   return (
-    <article className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/50">
+    <article className="group relative overflow-hidden border-2 border-foreground bg-card p-6 shadow-[5px_5px_0_0_var(--accent)] transition-transform hover:translate-x-px hover:translate-y-px">
       <div
         aria-hidden
         className="absolute -right-4 -top-6 font-mono text-7xl font-bold text-foreground/[0.04] transition-colors group-hover:text-primary/10"
@@ -369,7 +368,7 @@ function SideCase({
         {index}
       </div>
       <div className="relative space-y-4">
-        <div className="flex size-10 items-center justify-center rounded-lg border border-border bg-secondary/50 text-primary">
+        <div className="flex size-10 items-center justify-center border-2 border-foreground bg-primary text-primary-foreground">
           {icon}
         </div>
         <h3 className="text-lg font-bold">{title}</h3>
