@@ -8,27 +8,27 @@ const domains = [
   {
     code: "EDU",
     label: "Education",
-    note: "Sammanware   lectures, notes, and Q&A that live on a phone.",
+    note: "Sammanware: lectures, notes, and Q&A that live on a phone.",
   },
   {
     code: "TEL",
     label: "Telecom",
-    note: "Tower ops   site codes and coordinates for crews in the field.",
+    note: "Tower ops: site codes and coordinates for crews in the field.",
   },
   {
     code: "LAB",
     label: "Labs",
-    note: "Tadas   samples, inventory, and reports off the spreadsheet.",
+    note: "Tadas: samples, inventory, and reports off the spreadsheet.",
   },
   {
     code: "LOG",
     label: "Logistics",
-    note: "Tater Delivery   apparatus on a messy construction route.",
+    note: "Tater Delivery: apparatus on a messy construction route.",
   },
   {
     code: "W3",
     label: "Web3",
-    note: "Trade sims   paper markets. No live cash, no casino.",
+    note: "Trade sims: paper markets. No live cash, no casino.",
   },
   {
     code: "OPS",
@@ -187,7 +187,7 @@ export function AboutDossier() {
               <p className="text-2xl font-black uppercase leading-tight tracking-tight sm:text-3xl">
                 I{" "}
                 <span className="text-primary">design & develop</span> things
-                people use on site   not just in a browser tab.
+                people use on site, not just in a browser tab.
               </p>
               <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground">
                 Full-stack across MERN, React Native, Flutter, and Laravel.

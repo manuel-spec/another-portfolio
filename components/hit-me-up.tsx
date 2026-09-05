@@ -244,7 +244,7 @@ export function HitMeUp() {
             {hot ? "press" : "ready"}
           </p>
           <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
-            Skip the form. Ping me on Telegram or drop an email  I actually
+            Skip the form. Ping me on Telegram or drop an email. I actually
             read both.
           </p>
 

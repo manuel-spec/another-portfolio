@@ -8,11 +8,20 @@ export function Hero() {
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-16 top-1/2 hidden h-[28rem] w-[28rem] -translate-y-1/2 rounded-full bg-primary/25 blur-3xl lg:block"
+        className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(to_right,oklch(1_0_0_/_0.035)_1px,transparent_1px),linear-gradient(to_bottom,oklch(1_0_0_/_0.035)_1px,transparent_1px)] bg-[size:32px_32px]"
+      />
+      <div
+        aria-hidden
+        className="work-scan pointer-events-none absolute inset-x-0 top-0 z-0 h-24 bg-gradient-to-b from-transparent via-primary/20 to-transparent"
       />
 
       <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
         <div>
+          <p className="mb-4 flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
+            <span className="text-primary">$</span>
+            booting amanuel.dev
+            <span className="work-caret inline-block h-3 w-[2px] bg-primary" aria-hidden />
+          </p>
           <p className="mb-6 inline-block -rotate-2 border-2 border-foreground bg-accent px-2 py-1 font-mono text-xs font-bold uppercase tracking-[0.2em] text-accent-foreground shadow-[3px_3px_0_0_var(--primary)]">
             01  Full-stack · mobile & web
           </p>
@@ -21,7 +30,7 @@ export function Hero() {
             <span className="block text-primary">Asefa</span>
           </h1>
           <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
-            I design and ship products that have to work in the field  classrooms,
+            I design and ship products that have to work in the field: classrooms,
             tower sites, labs, and delivery routes. MERN, React Native, Flutter,
             and Laravel, with the boring parts (auth, data, ops) taken seriously.
           </p>
@@ -56,7 +65,6 @@ export function Hero() {
               src="/amanuel-cyberpunk-portrait.jpeg"
               alt="Illustrated portrait of Amanuel Asefa"
               className="relative size-64 object-cover border-2 border-foreground shadow-[8px_8px_0_0_var(--primary)] sm:size-80 lg:size-[22rem]"
-              style={{ borderRadius: "60px 20px 80px 30px" }}
             />
           </div>
           <p className="mt-5 -rotate-1 border-2 border-foreground bg-primary px-2 py-1 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-primary-foreground">

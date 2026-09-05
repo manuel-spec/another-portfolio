@@ -86,7 +86,7 @@ export function FeaturedProjects() {
           </div>
           <div className="max-w-md space-y-4">
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Most of this work sits inside client networks  education,
+              Most of this work sits inside client networks: education,
               telecom, labs, logistics. I can talk through the architecture
               and the constraints; I cannot drop the repos. Public experiments
               and code I can share live on GitHub.
@@ -147,7 +147,7 @@ export function FeaturedProjects() {
                   run the bench on spreadsheets. It tracks samples through the
                   lab, keeps inventory honest, and turns daily operations into
                   reports the people in charge can actually use. The live
-                  platform is at tadasystem.net  accounts are provisioned, not
+                  platform is at tadasystem.net; accounts are provisioned, not
                   public sign-up. Source stays with the client.
                 </p>
                 <p className="font-mono text-xs text-primary/80">
@@ -220,9 +220,9 @@ export function FeaturedProjects() {
             index="02"
             title="Sammanware"
             kicker="E-learning"
-            summary="A React Native classroom built so lessons are not trapped on a desktop. Video lectures, notes, and a Q&A thread live in one phone  students can ask, vote, and attach screenshots without leaving the course. The product is private; I can walk the stack and the UX decisions on a call."
+            summary="A React Native classroom built so lessons are not trapped on a desktop. Video lectures, notes, and a Q&A thread live in one phone; students can ask, vote, and attach screenshots without leaving the course. The product is private; I can walk the stack and the UX decisions on a call."
             stack="React Native · mobile-first"
-            src="/Screenshot 2025-09-09 133237.png"
+            src="/sammanware-app.png"
             alt="Sammanware course player and Q&A on a phone"
             tilt={-9}
             icon={<GraduationCap className="size-4" />}
@@ -231,9 +231,9 @@ export function FeaturedProjects() {
             index="03"
             title="Tower ops"
             kicker="Safaricom Ethiopia"
-            summary="A field app for telecom tower resource management: network sites, site codes, and coordinates for crews who are not sitting in an office. Built with React Native and Supabase so inventory and location data stay in sync when the team is on site. Client-owned  demo on request."
+            summary="A field app for telecom tower resource management: network sites, site codes, and coordinates for crews who are not sitting in an office. Built with React Native and Supabase so inventory and location data stay in sync when the team is on site. Client-owned; demo on request."
             stack="React Native · Supabase"
-            src="/Screenshot 2025-09-09 133839.png"
+            src="/tower-ops-app.png"
             alt="Telecom sites list with search and site cards on a phone"
             tilt={9}
             icon={<RadioTower className="size-4" />}
@@ -244,7 +244,7 @@ export function FeaturedProjects() {
           <SideCase
             index="04"
             title="Tater Delivery"
-            summary="Flutter app for construction apparatus delivery  contractors order tools and materials, then track the drop. Built for a messy, physical supply chain instead of a clean demo store."
+            summary="Flutter app for construction apparatus delivery: contractors order tools and materials, then track the drop. Built for a messy, physical supply chain instead of a clean demo store."
             stack="Flutter · logistics"
             icon={<Truck className="size-5" />}
           />
@@ -258,7 +258,7 @@ export function FeaturedProjects() {
           <SideCase
             index="06"
             title="Trade sims"
-            summary="Three separate platforms for crypto trade simulation  sandboxes to test strategies and market behavior without putting real money on the line. Built to learn the rails, not to ship a casino."
+            summary="Three separate platforms for crypto trade simulation: sandboxes to test strategies and market behavior without putting real money on the line. Built to learn the rails, not to ship a casino."
             stack="Web3 · simulation"
             icon={<Hexagon className="size-5" />}
           />
@@ -266,8 +266,8 @@ export function FeaturedProjects() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-border pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-lg text-sm leading-relaxed text-muted-foreground">
-            Private work stays private. What I can publish  experiments,
-            utilities, and public repos  is on GitHub.
+            Private work stays private. What I can publish (experiments,
+            utilities, and public repos) is on GitHub.
           </p>
           <a
             href="https://github.com/manuel-spec"
@@ -320,7 +320,7 @@ function DeviceCase({
             }`}
           >
             <img
-              src={src.replaceAll(" ", "%20")}
+              src={src}
               alt={alt}
               className="h-72 w-auto max-w-[13.5rem] rounded-[1.6rem] border-2 border-foreground object-cover object-top shadow-[6px_6px_0_0_var(--accent)]"
             />

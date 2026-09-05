@@ -7,7 +7,7 @@ const stages = [
     id: "01",
     code: "MOB",
     title: "Field mobile",
-    lead: "Apps that have to work in a classroom, on a tower site, or in a truck   not just on a demo Wi-Fi.",
+    lead: "Apps that have to work in a classroom, on a tower site, or in a truck, not just on a demo Wi-Fi.",
     stack: ["React Native", "Flutter", "Supabase"],
     runs: ["Sammanware", "Tower ops", "Tater Delivery"],
     lines: [
@@ -21,7 +21,7 @@ const stages = [
     id: "02",
     code: "WEB",
     title: "Full-stack web",
-    lead: "MERN and Laravel when the product needs a real backend   auth, data, and the boring ops that keep it up.",
+    lead: "MERN and Laravel when the product needs a real backend: auth, data, and the boring ops that keep it up.",
     stack: ["MERN", "Laravel", "REST"],
     runs: ["Tadas", "Client consoles"],
     lines: [
@@ -49,7 +49,7 @@ const stages = [
     id: "04",
     code: "W3",
     title: "Web3 sandboxes",
-    lead: "Trade simulations to learn the rails   sandboxes, not a casino.",
+    lead: "Trade simulations to learn the rails: sandboxes, not a casino.",
     stack: ["Web3", "simulation", "Appwrite"],
     runs: ["Trade sims"],
     lines: [
@@ -63,7 +63,7 @@ const stages = [
     id: "05",
     code: "UI",
     title: "Interfaces",
-    lead: "Sharp, usable surfaces for people who are busy   stamps, contrast, and no mystery meat.",
+    lead: "Sharp, usable surfaces for people who are busy: stamps, contrast, and no mystery meat.",
     stack: ["React", "Flutter", "design-in-code"],
     runs: ["Every build"],
     lines: [
